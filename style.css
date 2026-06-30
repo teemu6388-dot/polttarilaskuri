@@ -78,7 +78,7 @@ button {
 }
 
 button:disabled {
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: not-allowed;
 }
 
@@ -104,9 +104,18 @@ button.danger {
 
 .participant-controls {
     display: flex;
-    gap: 10px;
-    margin-top: 5px;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.control-group {
+    display: flex;
     flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
 }
 
 .status-badge {
@@ -116,6 +125,7 @@ button.danger {
     border-radius: 3px;
     display: inline-block;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 .flex-group {
@@ -123,6 +133,13 @@ button.danger {
     gap: 10px;
 }
 
-.flex-group > div {
+.flex-group > input {
     flex: 1;
+}
+
+.car-form {
+    border: 1px dashed var(--border-color);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
 }
