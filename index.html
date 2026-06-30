@@ -28,39 +28,26 @@
         <h2>🎉 Aktiviteetit</h2>
         <div class="flex-group">
             <input type="text" id="activityName" placeholder="Aktiviteetin nimi">
-            <input type="number" id="activityCost" placeholder="Kokonaiskustannus (€)" step="0.01">
+            <input type="number" id="activityCost" placeholder="Hinta / pää (€)" step="0.01">
             <button id="addActivityBtn">Lisää</button>
         </div>
         <div id="activitiesList"></div>
-        <h3 id="totalActivitiesCost">Aktiviteetit yhteensä: 0 €</h3>
+        <h3 id="totalActivitiesCost">Aktiviteetit yhteensä: 0.00 €</h3>
     </section>
 
     <section class="card">
         <h2>🚗 Autot & Polttoaine</h2>
-        <div class="flex-group">
-            <div>
-                <label for="carDistance">Matka (km)</label>
-                <input type="number" id="carDistance" value="100">
+        <div class="car-form">
+            <input type="text" id="carName" placeholder="Auton nimi/tunniste (esim. Auto 1)">
+            <div class="flex-group">
+                <input type="number" id="carDistance" placeholder="Matka (km)" value="100">
+                <input type="number" id="carConsumption" placeholder="Kulutus (l/100km)" value="6.5" step="0.1">
+                <input type="number" id="carFuelPrice" placeholder="Bensa (€/l)" value="1.95" step="0.01">
             </div>
-            <div>
-                <label for="carConsumption">Keskikulutus (l/100km)</label>
-                <input type="number" id="carConsumption" value="6.5" step="0.1">
-            </div>
+            <button id="addCarBtn" style="width: 100%; margin-top: 5px;">Lisää auto</button>
         </div>
-        <div class="flex-group">
-            <div>
-                <label for="carFuelPrice">Polttoaineen hinta (€/l)</label>
-                <input type="number" id="carFuelPrice" value="1.95" step="0.01">
-            </div>
-            <div>
-                <label for="carPayers">Maksajien määrä</label>
-                <input type="number" id="carPayers" value="1" min="1">
-            </div>
-        </div>
-        <div id="carResult">
-            <p><strong>Polttoainekulut yhteensä:</strong> <span id="carTotalCost">0.00</span> €</p>
-            <p><strong>Kustannus / maksaja:</strong> <span id="carCostPerPayer">0.00</span> €</p>
-        </div>
+        <div id="carsList"></div>
+        <h3 id="totalCarsCost">Polttoainekulut yhteensä: 0.00 €</h3>
     </section>
 
     <section class="card">
